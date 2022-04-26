@@ -57,12 +57,12 @@ class ProtectedProxy(Subject):
         raise PermissionError('无写入权限')
 
 
-virtual = VirtualProxy('test.txt')
+virtual = VirtualProxy('../test.txt')
 content = virtual.get_content()
 print(content)
 virtual.set_content('你好世界！')
 
-protected = ProtectedProxy('test.txt')
+protected = ProtectedProxy('../test.txt')
 content = protected.get_content()
 print(content)
 protected.set_content('hello world!')
